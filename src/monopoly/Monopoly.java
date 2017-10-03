@@ -1,6 +1,5 @@
 package monopoly;
 
-
 public class Monopoly {
 
     private final static int FIELD_COUNT = 40;
@@ -11,8 +10,8 @@ public class Monopoly {
 // statisk array
     public static Field[] fields;
     // 2 spillere 
-    private Player p1;
-    private Player p2;
+    private Player p1, p2;
+//    private Player p2;
     // loop til spillerkast 
 
     // slut/win condition
@@ -24,9 +23,9 @@ public class Monopoly {
             fields[i] = (new Field(i, "felt " + i));
         }
         System.out.println("Game setup complete");
-        Player p1 = new Player(new DiceCup(6), "Miriam", fields[0]);
-        Player p2 = new Player(new DiceCup(6), "Luca", fields[0]);
-        
+        p1 = new Player(new DiceCup(6), "Miriam", fields[0]);
+        p2 = new Player(new DiceCup(6), "Luca", fields[0]);
+        newRound();
     }
 
     public void newRound() {
@@ -38,10 +37,9 @@ public class Monopoly {
             // spiller 1 skal slå og flytte sig
             p1.move();
             // spiller 2 skal slå og flytte sig
-            p2.move(); 
+            p2.move();
             // hvis spillet ikke er over, startes en ny runde.
             newRound();
-
         }
     }
 //    public static void main(String args[]){
@@ -54,7 +52,5 @@ public class Monopoly {
 //        p2.move();
 //        p2.move();
     //System.out.println();}
-            
-    
 
 }

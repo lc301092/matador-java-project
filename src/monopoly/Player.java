@@ -10,6 +10,7 @@ package monopoly;
  * @author Luca Casa
  */
 public class Player {
+
     private DiceCup cup;
     private String name;
     private Field currentField;
@@ -21,8 +22,6 @@ public class Player {
         System.out.println("player " + name + " joined the game.");
     }
 
-    
-    
     public void move() {
         // current position
         int curPos = currentField.getFieldNumber();
@@ -31,12 +30,12 @@ public class Player {
         int roll = cup.throwCup();
         System.out.println(name + " this is the roll " + roll);
         // return the new position
-          curPos += roll;
-         currentField.setFieldNumber(curPos);
-         System.out.println(name + " after roll " + curPos);
-        // return curPos; // VIGTIG! skal indsættes i arrayet! curpos er en INTEGER, men det er alle indexpladserne i arrayet ikke. Det er Fields instancer 
-       
-        
+        curPos += roll;
+        currentField.setFieldNumber(curPos);
+        System.out.println(name + " after roll " + curPos);
+        // return curPos; // VIGTIG! skal indsættes i arrayet! curpos er en INTEGER, 
+        //men det er alle indexpladserne i arrayet ikke. Det er Fields instancer 
+
     }
-    
+
 }

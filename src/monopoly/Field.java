@@ -5,8 +5,6 @@
  */
 package monopoly;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Luca Casa

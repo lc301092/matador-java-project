@@ -15,7 +15,5 @@ public class AppStart {
     public static void main(String[] args) {
         Monopoly game1 = new Monopoly();
         game1.gameStart();
-        game1.newRound();
-    }
-    
+    }   
 }

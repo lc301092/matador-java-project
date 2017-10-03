@@ -31,8 +31,12 @@ public class Field {
     String getSpaceName() {
         return this.fieldName;
     }
-    void setFieldNumber(int newPos){
-    this.fieldNumber = newPos;
+    
+    void setFieldNumber(int newPos) {
+        // Run code and realize that it is the internal field number which changes, not the field the player is standing on.
+        // NOTE: The problem reveals itself because both players are assigned the SAME field.
+        System.out.println("Field number was changed for field: " + super.toString());
+        this.fieldNumber = newPos;
     }
 
 }

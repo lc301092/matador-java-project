@@ -31,7 +31,13 @@ public class Player {
         System.out.println(name + " this is the roll " + roll);
         // return the new position
         curPos += roll;
+        
+        // THIS IS BAD: You are actually assigning a new position to the field itself, which the player is on. Try assigning another field to the player instead.
+        // (or even better, just give the player the field number and ask the game (Monopoly) for info about the field using that number as an index.
+        // Example: Field f = getField(player.fieldNumber))
         currentField.setFieldNumber(curPos);
+        // Bad part: ^^^^^^^^^^^^^^^^^^^^^^
+        
         System.out.println(name + " after roll " + curPos);
         // return curPos; // VIGTIG! skal indsættes i arrayet! curpos er en INTEGER, 
         //men det er alle indexpladserne i arrayet ikke. Det er Fields instancer 
